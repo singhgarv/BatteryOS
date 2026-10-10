@@ -1,0 +1,1 @@
+"""Top-level system lifecycle and status interfaces."""

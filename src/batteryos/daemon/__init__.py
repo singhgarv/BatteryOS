@@ -1,0 +1,1 @@
+"""Read-only BatteryOS telemetry daemon."""

@@ -1,0 +1,1 @@
+"""Boot, sleep, and session lifecycle controls."""

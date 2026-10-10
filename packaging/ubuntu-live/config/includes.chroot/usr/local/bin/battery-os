@@ -1,0 +1,4 @@
+#!/bin/sh
+set -eu
+cd /opt/battery-os
+exec /usr/bin/python3 /opt/battery-os/main.py "$@"

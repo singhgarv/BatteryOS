@@ -1,0 +1,44 @@
+batteryos/
+├── README.md
+├── pyproject.toml
+├── config/
+│   ├── defaults.json
+│   └── power_profiles.json              # legacy prototype configuration
+├── src/
+│   └── batteryos/
+│       ├── cli/
+│       │   ├── battery_d.py
+│       │   └── batteryctl.py
+│       ├── benchmark/
+│       │   ├── analysis.py
+│       │   ├── environment.py
+│       │   ├── store.py
+│       │   └── workloads.py
+│       ├── daemon/
+│       │   └── service.py
+│       ├── hardware/
+│       │   └── profile.py                # read-only current profile probe
+│       ├── logging/
+│       │   └── events.py
+│       └── telemetry/
+│           └── collector.py
+├── tests/                                # legacy, telemetry, benchmark, validation tests
+├── sensors/                              # reusable, mockable Linux readers
+├── thermal/                              # read-only telemetry reused by core
+├── scripts/
+│   ├── build_ubuntu_live_image.py        # deferred packaging; not used by daemon
+│   └── validate_linux_hardware.py       # read-only interface inventory
+├── docs/
+│   └── mx-linux-v0.3-validation.md
+├── packaging/
+│   └── ubuntu-live/                      # deferred Ubuntu/Casper prototype
+├── shell/                                # legacy custom prompt; not BatteryOS core
+├── ui/                                   # legacy taskbar; not BatteryOS core
+├── commands/                             # legacy command routing
+├── apps/                                 # legacy notes/browser prototype
+├── settings/                             # legacy settings UI plus backlight reader
+├── power/                                # legacy policy prototype; not used to apply daemon policy
+├── boot/                                 # legacy lifecycle prototype
+├── system/                               # legacy status/startup facade
+├── main.py                               # legacy CLI entry point
+└── runtime.py                            # legacy CLI entry point

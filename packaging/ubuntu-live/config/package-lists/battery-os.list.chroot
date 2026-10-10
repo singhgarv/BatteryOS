@@ -1,0 +1,8 @@
+casper
+linux-generic
+network-manager
+power-profiles-daemon
+python3
+sudo
+systemd
+systemd-sysv

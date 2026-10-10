@@ -1,0 +1,1 @@
+"""Thermal monitoring and battery-aware response policies."""

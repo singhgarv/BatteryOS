@@ -1,0 +1,18 @@
+{
+  "power": {
+    "default_profile": "battery saver"
+  },
+  "laptop": {
+    "cpu_model": "Intel Core i7-1255U",
+    "memory_gib": 16,
+    "graphics": "Intel Iris Xe",
+    "battery_design_wh": 39.0,
+    "battery_health_percent": 64,
+    "battery_reserve_percent": 25
+  },
+  "thermal_limits": {
+    "warm_c": 70.0,
+    "hot_c": 85.0,
+    "critical_c": 95.0
+  }
+}

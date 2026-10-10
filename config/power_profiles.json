@@ -1,0 +1,20 @@
+{
+  "battery saver": {
+    "brightness": 35,
+    "cpu_limit": 40,
+    "idle_timeout": 30,
+    "background_service_policy": "minimal"
+  },
+  "balanced": {
+    "brightness": 60,
+    "cpu_limit": 65,
+    "idle_timeout": 90,
+    "background_service_policy": "moderate"
+  },
+  "performance": {
+    "brightness": 80,
+    "cpu_limit": 100,
+    "idle_timeout": 180,
+    "background_service_policy": "high"
+  }
+}

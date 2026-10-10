@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+if ! id -u batteryos >/dev/null 2>&1; then
+    useradd --create-home --shell /bin/bash batteryos
+fi
+
+install -d -o batteryos -g batteryos -m 0750 /home/batteryos/.local/share/battery-os
+chmod 0755 /opt/battery-os
+chmod 0755 /usr/local/bin/battery-os

@@ -1,0 +1,1 @@
+"""Battery OS settings application and sections."""

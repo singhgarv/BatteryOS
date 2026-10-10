@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "batteryos-telemetry"
+version = "0.1.0"
+description = "Read-only telemetry prototype for BatteryOS"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+"battery-d" = "batteryos.cli.battery_d:main"
+batteryctl = "batteryos.cli.batteryctl:main"
+
+[tool.setuptools]
+package-dir = {"" = ".", batteryos = "src/batteryos"}
+packages = [
+  "batteryos",
+  "batteryos.benchmark",
+  "batteryos.cli",
+  "batteryos.daemon",
+  "batteryos.hardware",
+  "batteryos.logging",
+  "batteryos.telemetry",
+  "apps",
+  "boot",
+  "commands",
+  "config",
+  "power",
+  "sensors",
+  "settings",
+  "system",
+  "thermal",
+  "ui",
+]

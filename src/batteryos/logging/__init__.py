@@ -1,0 +1,1 @@
+"""Structured BatteryOS event logging."""
