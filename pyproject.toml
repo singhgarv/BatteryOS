@@ -22,6 +22,7 @@ packages = [
   "batteryos.daemon",
   "batteryos.hardware",
   "batteryos.logging",
+  "batteryos.simulation",
   "batteryos.telemetry",
   "apps",
   "boot",

@@ -158,6 +158,10 @@ The repository retains an earlier CLI/taskbar/apps prototype and an Ubuntu Caspe
 7. **MX integration and packaging.** Only after the daemon and measurement model are reliable; preserve MX kernel, standard Bash/userspace, persistence, recovery path, and boot configuration.
 8. **Long-term adaptation.** Consider workload-aware policy only when measurements justify it; no unmeasured battery-life claims.
 
+## Simulation-Only Policy Milestone
+
+`batteryos.simulation.policy.simulate_policy(snapshot)` evaluates deterministic hypothetical recommendations from a supplied telemetry snapshot. It never collects telemetry, imports the legacy power policy, invokes host controls, writes sysfs, changes profiles, or claims energy savings. Thresholds are explicit in the result: low battery at 20% (critical at 10%), high CPU at 80%, and high temperature at 85 C. Missing or malformed inputs produce conservative recommendations and are listed as unavailable.
+
 ## Legacy Prototype
 
 The older `shell/`, `ui/`, `apps/`, `settings/`, and related command handlers implement a custom prompt, taskbar, notes/browser actions, and prototype power controls. They are retained during migration for compatibility with the existing 72-test baseline, but are out of the telemetry-first core and should not be expanded. The old `power auto apply` and `thermal tune` commands belong to that legacy path, not `battery-d` or `batteryctl`; do not use them as part of the read-only milestone.
