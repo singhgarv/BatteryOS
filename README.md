@@ -165,3 +165,26 @@ The repository retains an earlier CLI/taskbar/apps prototype and an Ubuntu Caspe
 ## Legacy Prototype
 
 The older `shell/`, `ui/`, `apps/`, `settings/`, and related command handlers implement a custom prompt, taskbar, notes/browser actions, and prototype power controls. They are retained during migration for compatibility with the existing 72-test baseline, but are out of the telemetry-first core and should not be expanded. The old `power auto apply` and `thermal tune` commands belong to that legacy path, not `battery-d` or `batteryctl`; do not use them as part of the read-only milestone.
+
+## Simulation Runner
+
+From the repository root, run all deterministic synthetic policy scenarios with:
+
+```powershell
+$env:PYTHONPATH = "$PWD\src"
+python scripts/run_policy_simulation.py
+```
+
+Run one scenario:
+
+```powershell
+python scripts/run_policy_simulation.py --scenario low-battery
+```
+
+Produce machine-readable JSON:
+
+```powershell
+python scripts/run_policy_simulation.py --json
+```
+
+The runner uses synthetic snapshots only. It does not collect telemetry, change power settings, or claim energy savings.
